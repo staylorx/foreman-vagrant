@@ -3,23 +3,26 @@
     "theforeman.example.com": {
       ":ip": "192.168.35.5",
       "ports": [],
-      ":memory": 1024,
-      ":box": "puppetlabs/centos-7.0-64-puppet",
+      ":memory": 3072,
+	  ":cpus": 2,
+      ":box": "centos/7",
       ":bootstrap": "bootstrap-foreman.sh"
     },
     "agent01.example.com": {
       ":ip": "192.168.35.10",
       "ports": [],
       ":memory": 1024,
-      ":box": "puppetlabs/centos-7.0-64-puppet",
+	  ":cpus": 1,
+      ":box": "centos/7",
       ":bootstrap": "bootstrap-node-rhel.sh"
     },
     "agent02.example.com": {
       ":ip": "192.168.35.20",
       "ports": [],
       ":memory": 1024,
-      ":box": "puppetlabs/centos-7.0-64-puppet",
-      ":bootstrap": "bootstrap-node-rhel.sh"
+	  ":cpus": 1,
+      ":box": "ubuntu/xenial64",
+      ":bootstrap": "bootstrap-node-ubuntu.sh"
     }
   }
 }
