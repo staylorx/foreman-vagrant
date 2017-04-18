@@ -29,7 +29,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
     config.vm.define node_name do |config|
 
-   	  puts "* Working on node %s." % [node_name]
+   	  #puts "* Working on node %s." % [node_name]
       config.vm.box = node_values[':box']
 
 	  # configures all forwarding ports in JSON array

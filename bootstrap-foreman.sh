@@ -4,7 +4,8 @@
 # Gary A. Stafford - 01/15/2015
 # Modified for Foreman 1.15 and Puppet 4 only - Steve Taylor - 04/14/2017
 
-FOREMAN_VERSION=1.15
+#1.14 is stable, 1.15 is RC
+FOREMAN_VERSION=1.14
 
 # Update system first
 sudo yum -y install nmap-ncat firewalld
@@ -54,6 +55,10 @@ else
     sudo /opt/puppetlabs/bin/puppet module install puppetlabs-apache
     sudo /opt/puppetlabs/bin/puppet module install puppetlabs-java
     sudo /opt/puppetlabs/bin/puppet module install puppetlabs-motd
+	sudo /opt/puppetlabs/bin/puppet module install maestrodev-wget
+	
+	#For grins
+	sudo /opt/puppetlabs/bin/puppet module install biemond-orawls
 	
 	#add a plugin or two
 	sudo yum -y install tfm-rubygem-foreman_ansible
